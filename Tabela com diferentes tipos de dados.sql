@@ -17,9 +17,10 @@ CREATE TABLE tb_funcionarios(
     sexo ENUM("F" ,"M"),
     cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
 );
-/*DOIS TIPOS DIFERENTES DE INSERT*/
+/*TIPOS DIFERENTES DE INSERT*/
 INSERT INTO tb_funcionarios VALUES(1,"Gustavo","4999.00","2016-01-01", "M", NULL);
 INSERT INTO tb_funcionarios(id, nome, salario, admissao, sexo) VALUES(2,"Gustavo2","8999.00","2022-10-01", "M");
+INSERT INTO tb_funcionarios(nome, salario, admissao, sexo) VALUES("Gustavo1","8999.00","2022-10-01", "M"),("Gustavo2","5400.00","2022-10-01", "M"),("Gustavo3","8000.00","2022-10-01", "M");
 
 /* DESCREVE A TABELA FUNCIONARIOS ("FIELDS, TYPE, NULL, KEY, DEFAULT, EXTRA")*/
 DESCRIBE tb_funcionarios; 
