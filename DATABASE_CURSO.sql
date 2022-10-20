@@ -107,6 +107,7 @@ SELECT * FROM tb_funcionarios WHERE nome LIKE '__G%';
 SELECT * FROM tb_funcionarios WHERE nome NOT LIKE 'G%';
 
 
+/*COMANDO BETWEEN*/
 
 /*EXIBE TODOS OS FUNCIONARIOS QUE POSSUAM salario ENTRE 1000 E 3000*/
 SELECT * FROM tb_funcionarios WHERE salario BETWEEN 1000 AND 3000;
