@@ -89,6 +89,27 @@ SELECT * FROM tb_funcionarios WHERE salario <> 950.00 OR sexo ="F";
 UPDATE tb_funcionarios SET salario = salario * 1.2 WHERE sexo = "F";
 
 
+/*DIFERENTES MANEIRAS DE PESQUISAR A DATA NO MYSQL*/
+SELECT * FROM tb_funcionarios WHERE cadastro >= '2022-10-20 12:42:39';
+SELECT * FROM tb_funcionarios WHERE cadastro >= '2022/10/20 12:42:39';
+SELECT * FROM tb_funcionarios WHERE cadastro >= '2022.10.20 12:42:39';
+SELECT * FROM tb_funcionarios WHERE cadastro >= '20221020124239';
+
+/*ATUALIZE A admissao DOS FUNCIONARIOS PARA A DATA ATUAL QUANDO O id FOR = 2*/
+UPDATE tb_funcionarios SET admissao = CURRENT_DATE() WHERE id = 2 ;
+
+/*ATUALIZE A admissao DOS FUNCIONARIOS PARA A 60 DIAS A FRENTE QUANDO O id FOR = 2*/
+UPDATE tb_funcionarios SET admissao = DATE_ADD(CURRENT_DATE(), INTERVAL 60  DAY) WHERE id = 2 ;
+
+/*VERIFICA A DIFERENÇA ENTRE A admissao E A DATA ATUAL QUANDO O id FOR = 2*/
+SELECT DATEDIFF(admissao, CURRENT_DATE()) AS "DIFERENÇA DE DIAS" FROM tb_funcionarios WHERE id = 2;
+
+/*SELECIONA OS FUNCIONARIOS ADMITIDOS NO MES 10*/
+SELECT * FROM tb_funcionarios WHERE MONTH(admissao) = 10;
+
+
+
+
 /*COMANDO LIKE */
 
 /*nome QUE CONTEM E EM QUALQUER POSICAO*/
