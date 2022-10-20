@@ -57,6 +57,22 @@ INSERT INTO tb_pessoa(nome,sexo) VALUES
 CAMPOS JA EXISTENTES COMO id,nome e sexo PODEMOS PEGAR DO CONTEUDO DA TABELA. 
 CAMPOS NÃO EXISTANTES COMO salario, admissao e cadastro UTILIZAMOS FUNCOES OU DEFINIMOS VALOR FIXO
 */
-
 INSERT into tb_funcionarios 
 SELECT id,nome, 950.00, CURRENT_DATE(), sexo, NULL FROM tb_pessoa;
+
+
+/*CONTA O TOTAL DE LINHAS DA TABELA tb_funcionarios*/
+SELECT COUNT(*) AS total FROM tb_funcionarios;
+
+
+/*SELECIONA O salario COMO atual E salario O SALARIO COM AUMENTO DE 20%*/
+SELECT nome,salario AS atual,
+salario * 1.2 AS "salario com aumento de 20%"
+FROM tb_funcionarios;
+
+
+/*SELECIONA O salario COMO atual E SIMULA O salario COM AUMENTO DE 20%, FORMATANDO PARA DECIMAL*/
+
+SELECT nome,salario AS atual,
+CONVERT(salario * 1.2, DEC(10,2)) AS "salario com aumento de 20%"
+FROM tb_funcionarios
