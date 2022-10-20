@@ -77,3 +77,24 @@ SELECT * FROM tb_funcionarios WHERE salario NOT BETWEEN 1000 AND 3000;
 
 /*EXIBE TODOS OS FUNCIONARIOS QUE O nome SOE COMO Luis, EXEMPLO = "Luiz"*/
 SELECT * FROM tb_funcionarios WHERE SOUNDEX(nome) = SOUNDEX('Luis');
+
+
+/*COMANDO ORDER BY*/
+
+/* ORDENAR PELO nome*/
+SELECT * FROM tb_funcionarios ORDER BY nome;
+
+/* ORDENAR PELA SEGUNDA COLUNA DA TABELA */
+SELECT * FROM tb_funcionarios ORDER BY 2;
+
+/* ORDENAR PELO salario*/
+SELECT* FROM tb_funcionarios ORDER BY salario;
+
+/* ORDENAR PELO salario EM ORDEM DECRESCENTE*/
+SELECT* FROM tb_funcionarios ORDER BY salario DESC;
+
+/* ORDENAR PELO salario EM ORDEM DECRESCENTE E nome EM ORDEM CRESCENTE(ALFABETICA)*/
+SELECT* FROM tb_funcionarios ORDER BY salario DESC, nome ASC;
+
+/* ORDENAR PELO salario EM ORDEM CRESCENTE*/
+SELECT* FROM tb_funcionarios ORDER BY salario ASC;
