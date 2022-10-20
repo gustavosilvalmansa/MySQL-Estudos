@@ -98,3 +98,9 @@ SELECT* FROM tb_funcionarios ORDER BY salario DESC, nome ASC;
 
 /* ORDENAR PELO salario EM ORDEM CRESCENTE*/
 SELECT* FROM tb_funcionarios ORDER BY salario ASC;
+
+
+/*COMANDO LIMIT*/
+
+/* PEGAR OS 3 PRIMEIROS USUARIOS*/
+SELECT* FROM tb_funcionarios LIMIT 0,3;
