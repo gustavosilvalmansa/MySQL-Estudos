@@ -35,3 +35,28 @@ UPDATE tb_funcionarios SET salario = salario* 1.2 WHERE id="2";
 
 /*EXCLUI O USUARIO QUE POSSUI O ID = 1*/
 DELETE from tb_funcionarios where id ="1";
+
+/*CRIA TABELA PESSOA*/
+CREATE table tb_pessoa(
+	id INT,
+    nome VARCHAR(100),
+    sexo ENUM("F","M")
+);
+
+/*INSERE LINHAS NA TABELA*/
+INSERT INTO tb_pessoa(nome,sexo) VALUES 
+("MARCO","M"),
+("TIGRINHO","M"),
+("RUGA","M"),
+("JU","F"),
+("JAQUE","F"),
+("RITA","F"),
+("LU","F");
+
+/*INSERE NA TABELA tb_funcionarios OS DADOS VINDOS DA tb_pessoa
+CAMPOS JA EXISTENTES COMO id,nome e sexo PODEMOS PEGAR DO CONTEUDO DA TABELA. 
+CAMPOS NÃO EXISTANTES COMO salario, admissao e cadastro UTILIZAMOS FUNCOES OU DEFINIMOS VALOR FIXO
+*/
+
+INSERT into tb_funcionarios 
+SELECT id,nome, 950.00, CURRENT_DATE(), sexo, NULL FROM tb_pessoa;
