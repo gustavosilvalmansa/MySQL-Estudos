@@ -1,0 +1,27 @@
+CREATE DATABASE curso;
+
+USE curso;
+
+/* TIPOS DE DADOS USADOS NA TABELA tb_funcionarios
+INT -> NUMEROS INTEIROS
+VARCHAR -> CARACTERES VARIADOS
+DECIMAL -> NUMEROS QUEBRADOS (INTEIRO, CASAS DECIMAIS)
+ENUM -> VALIDAS SE O INSERT CONTEM AS OPÇÕES DENTRO DOS PARENTESES ("V", "F")
+TIMESTAMP -> CARIMBO DE Tempo
+*/
+
+CREATE TABLE tb_funcionarios(
+	id INT,
+    nome VARCHAR(100),
+    salario DECIMAL(10,2),
+    admissao DATE,
+    sexo ENUM("F" ,"M"),
+    cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
+);
+
+/*CRIA TABELA PESSOA*/
+CREATE table tb_pessoa(
+	id INT,
+    nome VARCHAR(100),
+    sexo ENUM("F","M")
+);
