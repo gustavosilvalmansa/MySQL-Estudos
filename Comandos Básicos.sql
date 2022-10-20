@@ -1,16 +1,17 @@
-CREATE TABLE curso;
+CREATE DATABASE curso; /*CRIAR BANCO DE DADOS*/
 
-USE curso;
+USE curso; /*SELECIONAR UMA TABELA*/
 
-CREATE TABLE clientes(
-	id INT,
-	nome VARCHAR(100)
+CREATE TABLE clientes( /*CRIAR TABELA*/
+	id INT,       /*COLUNA ID*/
+	nome VARCHAR(100) /*COLUNA NOME*/
 );
 
-INSERT INTO clientes VALUES(1,'Gustavo Almansa');
 
+/*INSERINDO DADOS NA TABELA */
+INSERT INTO clientes VALUES(1,'Gustavo Almansa');
 INSERT INTO clientes(nome,id) VALUES('Gustavo Almansa2', 2);
 
-SELECT * FROM clientes;
+SELECT * FROM clientes; /*CONSULTANDO TODOS OS DADOS DA TABELA clientes*/
 
-DROP database curso;
+DROP database curso; /*DELETANDO BANCO DE DADOOS*/
