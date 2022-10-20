@@ -23,3 +23,14 @@ INSERT INTO tb_funcionarios(id, nome, salario, admissao, sexo) VALUES(2,"Gustavo
 
 /* DESCREVE A TABELA FUNCIONARIOS ("FIELDS, TYPE, NULL, KEY, DEFAULT, EXTRA")*/
 DESCRIBE tb_funcionarios; 
+
+/*CONSULTANDO TODOS OS USUÁRIOS CADASTRADOS*/
+SELECT * FROM tb_funcionarios;
+
+
+/*ATUALIZA O SALARIO EM 20%(SALARIO = SALARIO * 1.2) DO USUARIO DA TABELA tb_funcionarios QUE POSSUI O id = 2*/
+UPDATE tb_funcionarios SET salario = salario* 1.2 WHERE id="2";
+
+
+/*EXCLUI O USUARIO QUE POSSUI O ID = 1*/
+DELETE from tb_funcionarios where id ="1";
