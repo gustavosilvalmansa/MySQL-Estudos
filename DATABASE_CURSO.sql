@@ -87,3 +87,18 @@ SELECT * FROM tb_funcionarios WHERE sexo ="M" AND salario > 9000.00;
 SELECT * FROM tb_funcionarios WHERE salario <> 950.00 OR sexo ="F";
 /*ATUALIZA A TABELA tb_funcionarios AUMENTANDO O salario EM 20% QUANDO O sexo FOR = "F"*/
 UPDATE tb_funcionarios SET salario = salario * 1.2 WHERE sexo = "F";
+
+/*nome QUE CONTEM E EM QUALQUER POSICAO*/
+SELECT * FROM tb_funcionarios WHERE nome LIKE '%E%';
+
+/*nome QUE COMECE COM G*/
+SELECT * FROM tb_funcionarios WHERE nome LIKE 'G%';
+
+/*nome QUE TERMINE COM A*/
+SELECT * FROM tb_funcionarios WHERE nome LIKE '%A';
+
+/*nome QUE A TERCEIRA LETRA SEJA G */
+SELECT * FROM tb_funcionarios WHERE nome LIKE '__G%';
+
+/*nome QUE NÃO COMECE COM G*/
+SELECT * FROM tb_funcionarios WHERE nome NOT LIKE 'G%';
