@@ -17,7 +17,7 @@ CREATE TABLE tb_funcionarios(
     sexo ENUM("F" ,"M"),
     cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP()
 );
-/*TIPOS DIFERENTES DE INSERT*/
+/*COMANDO INSERT */
 INSERT INTO tb_funcionarios VALUES(1,"Gustavo","4999.00","2016-01-01", "M", NULL);
 INSERT INTO tb_funcionarios(id, nome, salario, admissao, sexo) VALUES(2,"Gustavo2","8999.00","2022-10-01", "M");
 INSERT INTO tb_funcionarios(nome, salario, admissao, sexo) VALUES("Gustavo1","8999.00","2022-10-01", "M"),("Gustavo2","5400.00","2022-10-01", "M"),("Gustavo3","8000.00","2022-10-01", "M");
@@ -76,7 +76,7 @@ SELECT nome,salario AS atual,
 CONVERT(salario * 1.2, DEC(10,2)) AS "salario com aumento de 20%"
 FROM tb_funcionarios
 
-
+/*COMANDO SELECT */
 /*SELECIONA TODOS OS DADOS DA TABELA tb_funcionarios QUANDO O sexo FOR = "F"*/
 SELECT * FROM tb_funcionarios WHERE sexo = "F";
 /*SELECIONA TODOS OS DADOS DA TABELA tb_funcionarios QUANDO O salario FOR DIFERENTE DE 950.00 */
@@ -87,6 +87,9 @@ SELECT * FROM tb_funcionarios WHERE sexo ="M" AND salario > 9000.00;
 SELECT * FROM tb_funcionarios WHERE salario <> 950.00 OR sexo ="F";
 /*ATUALIZA A TABELA tb_funcionarios AUMENTANDO O salario EM 20% QUANDO O sexo FOR = "F"*/
 UPDATE tb_funcionarios SET salario = salario * 1.2 WHERE sexo = "F";
+
+
+/*COMANDO LIKE */
 
 /*nome QUE CONTEM E EM QUALQUER POSICAO*/
 SELECT * FROM tb_funcionarios WHERE nome LIKE '%E%';
@@ -102,3 +105,11 @@ SELECT * FROM tb_funcionarios WHERE nome LIKE '__G%';
 
 /*nome QUE NÃO COMECE COM G*/
 SELECT * FROM tb_funcionarios WHERE nome NOT LIKE 'G%';
+
+
+
+/*EXIBE TODOS OS FUNCIONARIOS QUE POSSUAM salario ENTRE 1000 E 3000*/
+SELECT * FROM tb_funcionarios WHERE salario BETWEEN 1000 AND 3000;
+
+/*EXIBE TODOS OS FUNCIONARIOS QUE O salario NÃO ESTEJA ENTRE 1000 E 3000*/
+SELECT * FROM tb_funcionarios WHERE salario NOT BETWEEN 1000 AND 3000;
