@@ -12,3 +12,5 @@ INSERT INTO clientes VALUES(1,'Gustavo Almansa');
 INSERT INTO clientes(nome,id) VALUES('Gustavo Almansa2', 2);
 
 SELECT * FROM clientes;
+
+DROP database curso;
