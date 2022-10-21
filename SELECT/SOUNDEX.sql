@@ -1,0 +1,5 @@
+/*COMANDO SOUNDEX*/
+
+/*EXIBE TODOS OS FUNCIONARIOS QUE O nome SOE COMO Luis, EXEMPLO = "Luiz"*/
+SELECT * FROM tb_funcionarios WHERE SOUNDEX(nome) = SOUNDEX('Luis');
+
