@@ -36,3 +36,16 @@ CONVERT(MIN(a.vlpedido), DEC(10,2)) AS minimo,
 CONVERT(MAX(a.vlpedido), DEC(10,2)) AS maximo,
 COUNT(*) AS pedidos
 FROM tb_pedidos a INNER JOIN tb_pessoas b USING(idpessoa) GROUP BY b.idpessoa ORDER BY pedidos;
+
+
+/*HAVING FUNCIONA COMO WHERE, EXCLUSIVO PARA GROUP BY*/
+SELECT b.desnome,
+SUM(a.vlpedido) AS total, 
+CONVERT(AVG(a.vlpedido), DEC(10,2)) AS media,
+CONVERT(MIN(a.vlpedido), DEC(10,2)) AS minimo,
+CONVERT(MAX(a.vlpedido), DEC(10,2)) AS maximo,
+COUNT(*) AS pedidos
+FROM tb_pedidos a INNER JOIN tb_pessoas b USING(idpessoa) 
+GROUP BY b.idpessoa
+HAVING SUM(a.vlpedido) > 7000
+ORDER BY pedidos;
