@@ -1,0 +1,12 @@
+# Estudos sobre MySQL
+## Conteudo do repositório:
+<ul>
+<li> COMANDOS BÁSICOS PARA CRIAÇÃO DE BANCO E TABELAS </li>
+<li> CRUD COM MYSQL </li>
+<li> CRIAÇÃO DE STORED PROCEDURES </li>
+<li> TRABALHANDO COM TRANSACTION, ROLLBACK E COMMIT </li>
+<li> TABELAS RELACIONAIS ( CHAVE PRIMÁRIA(PK) E CHAVE ESTRANGEIRA(FK) </li>
+<li> CRIANDO FUNÇÕES </li>
+<li> ENTRE OUTROS </li>
+
+</ul>
